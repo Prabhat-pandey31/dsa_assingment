@@ -1,0 +1,41 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class linearsearch 
+
+
+{
+	
+	public static boolean linearsearch(int [] arr , int key) {
+		for (int i = 0; i < arr.length; i++) 
+		{
+			if(key==arr[i])
+			{
+			 return true;
+			}
+			}
+			return false;
+		}
+		
+	
+	public static void main(String[] args) {
+		
+	
+	int [] arr = {23,54,67,34,97};
+	
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter key:");
+	int key=sc.nextInt();
+	boolean ans = linearsearch(arr,key);
+	if(ans==true) {
+		System.out.println("array is present");
+	}
+	else {
+		System.out.println("array is not present");
+	}
+		 
+	} 
+	
+	
+	
+	}
