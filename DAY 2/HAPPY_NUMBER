@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class chatgpt {
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num1, num2;
+        num1 = input.nextInt();
+        num2 = input.nextInt();
+        int check = 1;
+        for (int i = num1; i <= num2; i++) {
+            if (HappyNumber(i) == check) {
+                System.out.println(i + " ");
+            }
+        }
+    }
+
+    static int HappyNumber(int i) {
+        int num = i;
+        while (num != 1 && num != 4) {
+            int sum = 0;
+            while (num > 0) {
+                int digit = num % 10;
+                sum += digit * digit;
+                num /= 10;
+            }
+            num = sum;
+        }
+        return num;
+    }
+
+}
